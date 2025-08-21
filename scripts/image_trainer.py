@@ -234,7 +234,7 @@ def create_config(task_id, model, model_type, expected_repo_name=None, hours_to_
 
     # config['max_train_steps'] = 0
     # config['max_train_steps'] = 10
-    config['max_train_steps'] = 20
+    # config['max_train_steps'] = 20
 
     print(f"max_train_steps: {config['max_train_steps']}")
 
