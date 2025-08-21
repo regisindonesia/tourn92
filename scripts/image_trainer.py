@@ -513,9 +513,9 @@ def run_training(task_id, model, model_type, expected_repo_name, hours_to_comple
             print(f"docker_runtime: {docker_runtime}")
 
             if model_type == ImageModelType.SDXL.value:
-                docker_runtime =  int(docker_runtime*1.1)
+                docker_runtime =  int(docker_runtime*0.9)
             elif model_type == ImageModelType.FLUX.value:
-                docker_runtime =  int(docker_runtime*0.95)
+                docker_runtime =  int(docker_runtime*0.9)
 
             print(f"Avg runtime: {docker_runtime}")
 
