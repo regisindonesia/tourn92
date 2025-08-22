@@ -261,7 +261,7 @@ def run_training(task_id, model, model_type, expected_repo_name, hours_to_comple
 
     docker_level = ["win1","win2","win3","win4"]
     # docker_batch = [8,8,8,4,4,4]
-    docker_batch = [4,4,4,1,1,1]
+    docker_batch = [8,8,8,4,4,4,1,1,1]
     docker_seq = ["1024,1024","768,768","512,512","1024,1024","768,768","512,512","1024,1024","768,768","512,512","1024,1024","768,768","512,512"]
     docker_lrate = 0.0002
     docker_runtime = 10
@@ -513,9 +513,9 @@ def run_training(task_id, model, model_type, expected_repo_name, hours_to_comple
             print(f"docker_runtime: {docker_runtime}")
 
             if model_type == ImageModelType.SDXL.value:
-                docker_runtime =  int(docker_runtime*0.9)
+                docker_runtime =  int(docker_runtime*1.1)
             elif model_type == ImageModelType.FLUX.value:
-                docker_runtime =  int(docker_runtime*0.9)
+                docker_runtime =  int(docker_runtime*0.95)
 
             print(f"Avg runtime: {docker_runtime}")
 
